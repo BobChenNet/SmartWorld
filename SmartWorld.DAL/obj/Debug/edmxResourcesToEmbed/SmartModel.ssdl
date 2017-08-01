@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartWorldModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="D_House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HouseCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="HouseTitle" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Floor" Type="int" />
+    <Property Name="TotalFloor" Type="int" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="YearPrice" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ImgUrls" Type="text" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="Decorate" Type="int" />
+    <Property Name="HouseType" Type="int" />
+    <Property Name="Property" Type="int" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="D_HouseAndEquipment">
+    <Key>
+      <PropertyRef Name="HouseId" />
+      <PropertyRef Name="EquipmentId" />
+    </Key>
+    <Property Name="id" Type="int" />
+    <Property Name="HouseId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EquipmentId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D_Info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Remark" Type="text" />
+    <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="S_Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="EquipmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="S_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="SmartWorldModelStoreContainer">
+    <EntitySet Name="D_House" EntityType="Self.D_House" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D_HouseAndEquipment" EntityType="Self.D_HouseAndEquipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="D_Info" EntityType="Self.D_Info" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="S_Equipment" EntityType="Self.S_Equipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="S_User" EntityType="Self.S_User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

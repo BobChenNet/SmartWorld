@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SmartWorldModelStoreContainer" CdmEntityContainer="SmartWorldEntities">
+    <EntitySetMapping Name="D_House">
+      <EntityTypeMapping TypeName="SmartWorldModel.D_House">
+        <MappingFragment StoreEntitySet="D_House">
+          <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+          <ScalarProperty Name="Property" ColumnName="Property" />
+          <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+          <ScalarProperty Name="Decorate" ColumnName="Decorate" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="ImgUrls" ColumnName="ImgUrls" />
+          <ScalarProperty Name="YearPrice" ColumnName="YearPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TotalFloor" ColumnName="TotalFloor" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="HouseTitle" ColumnName="HouseTitle" />
+          <ScalarProperty Name="HouseCode" ColumnName="HouseCode" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="D_HouseAndEquipment">
+      <EntityTypeMapping TypeName="SmartWorldModel.D_HouseAndEquipment">
+        <MappingFragment StoreEntitySet="D_HouseAndEquipment">
+          <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+          <ScalarProperty Name="HouseId" ColumnName="HouseId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="D_Info">
+      <EntityTypeMapping TypeName="SmartWorldModel.D_Info">
+        <MappingFragment StoreEntitySet="D_Info">
+          <ScalarProperty Name="Tel" ColumnName="Tel" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_Equipment">
+      <EntityTypeMapping TypeName="SmartWorldModel.S_Equipment">
+        <MappingFragment StoreEntitySet="S_Equipment">
+          <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_User">
+      <EntityTypeMapping TypeName="SmartWorldModel.S_User">
+        <MappingFragment StoreEntitySet="S_User">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

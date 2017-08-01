@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "AddHouseInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Scripts.Render("~/Scripts/addHouseInfo.js")
+@Scripts.Render("~/Content/uploadify/jquery.uploadify.min.js")
+<link type="text/css" href="~/Content/uploadify/uploadify.css" rel="stylesheet" />
+<script src="~/Content/uploadify/jquery.uploadify.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("#file_upload").uploadify({
+            //指定swf文件
+            'swf': '@Url.Content("~/Content/uploadify/uploadify.swf")',
+            //后台处理的页面
+            'uploader': '/House/Upload',
+            //按钮显示的文字
+            'buttonText': '上传图片',
+            //显示的高度和宽度，默认 height 30；width 120
+            //'height': 15,
+            //'width': 80,
+            //上传文件的类型  默认为所有文件	'All Files'  ;  '*.*'
+            //在浏览窗口底部的文件类型下拉菜单中显示的文本
+            'fileTypeDesc': 'Image Files',
+            //允许上传的文件后缀
+            'fileTypeExts': '*.gif; *.jpg; *.png',
+            //发送给后台的其他参数通过formData指定
+            //'formData': { 'someKey': 'someValue', 'someOtherKey': 1 },
+            //上传文件页面中，你想要用来作为文件队列的元素的id, 默认为false  自动生成,  不带#
+            //'queueID': 'fileQueue',
+            //选择文件后自动上传
+            'auto': false,
+            //设置为true将允许多文件上传
+            'multi': true
+        });
+    });
+</script>
+
+<h2>信息登记</h2>
+<div class="form-horizontal">
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">标题：</label>
+        <div class="col-sm-8">
+            <p class="help-block"></p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">房间编号：</label>
+        <div class="col-sm-8">
+            <p class="help-block">CDZ0001A</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">房源信息：</label>
+        <div class="col-sm-8">
+            <p class="help-block">保利心语2栋3单元5号</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label" style="padding-top:0px;">价格:</label>
+        <div class="col-sm-8">
+            <input name="price" type="radio" checked="checked" value="day"> 按天算
+            <input name="price" type="radio" value="radio" value="mon"> 按月算 &nbsp;&nbsp;
+            <label><span id="lable_PriceShow2"></span></label>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">开始时间:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="" placeholder="">
+        </div>
+        <label for="" class="col-sm-2 control-label">结束时间:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="" placeholder="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">付款方式:</label>
+        <div class="col-sm-3">
+            <select class="form-control col-sm-3">
+                <option>成都</option>
+                <option>杭州</option>
+            </select>
+        </div>
+        <label for="" class="col-sm-2 control-label">每月租金:</label>
+        <div class="col-sm-3">
+            <div class="input-group">
+                <span class="input-group-addon">¥</span>
+                <input type="number" min="0" step="1" class="form-control">
+                <!--<span class="input-group-addon">.00</span>-->
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">客户姓名:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="userName" id="" placeholder="姓名">
+        </div>
+        <label for="" class="col-sm-2 control-label">客户电话:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" name="userTel" id="" placeholder="联系电话">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="" class="col-sm-2 control-label">门卡编号:</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control search-query" id="" placeholder="门卡编号">
+        </div>
+    </div>
+    <div id="userDiv">
+        <fieldset>
+            <legend class="">
+                <h6>图片信息</h6>
+            </legend>
+            <div class="form-group">
+                <div id="fileQueue">
+                </div>
+                <input type="file" id="file_upload" name="file_upload" />
+                <p>
+                    <a href="javascript:$('#file_upload').uploadify('upload')" class="btn">上传</a>|
+                    <a href="javascript:$('#file_upload').uploadify('cancel')" class="btn">取消上传</a>
+                </p>
+            </div>
+        </fieldset>
+    </div>
+    <div id="userDiv2">
+        <a href="javascript:void(0)" onclick="AddUser()" class="btn btn-sm btn-info">+添加合租人</a>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" class="btn btn-primary">确定</button>
+            <button type="button" class="btn btn-primary" style="margin-left: 20px;">取消</button>
+            <button type="button" id="delUser" onclick="DelUser()" class="btn btn-danger" style="margin-left: 20px; display: none;">删除租客</button>
+        </div>
+    </div>
+</div>
+

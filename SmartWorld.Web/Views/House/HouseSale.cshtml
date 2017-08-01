@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "HouseSale";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model  SmartWorld.Uitls.Result<List<SmartWorld.DAL.D_House>>
+<h2>HouseSale</h2>
+@{
+    foreach (var item in Model.Data)
+    {
+        <span>item.ID</span>
+    }
+}
+

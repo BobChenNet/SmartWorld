@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SmartWorldModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="D_House">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="HouseCode" Type="nvarchar" MaxLength="50" />
+          <Property Name="HouseTitle" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Floor" Type="int" />
+          <Property Name="TotalFloor" Type="int" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="YearPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ImgUrls" Type="text" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="Decorate" Type="int" />
+          <Property Name="HouseType" Type="int" />
+          <Property Name="Property" Type="int" />
+          <Property Name="IsDelete" Type="bit" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="D_HouseAndEquipment">
+          <Key>
+            <PropertyRef Name="HouseId" />
+            <PropertyRef Name="EquipmentId" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="HouseId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="EquipmentId" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="D_Info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Title" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Remark" Type="text" />
+          <Property Name="Contact" Type="nvarchar" MaxLength="50" />
+          <Property Name="Tel" Type="nvarchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="S_Equipment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="EquipmentName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="S_User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="SmartWorldModelStoreContainer">
+          <EntitySet Name="D_House" EntityType="Self.D_House" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="D_HouseAndEquipment" EntityType="Self.D_HouseAndEquipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="D_Info" EntityType="Self.D_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_Equipment" EntityType="Self.S_Equipment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="S_User" EntityType="Self.S_User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SmartWorldModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SmartWorldEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="D_House" EntityType="SmartWorldModel.D_House" />
+          <EntitySet Name="D_HouseAndEquipment" EntityType="SmartWorldModel.D_HouseAndEquipment" />
+          <EntitySet Name="D_Info" EntityType="SmartWorldModel.D_Info" />
+          <EntitySet Name="S_Equipment" EntityType="SmartWorldModel.S_Equipment" />
+          <EntitySet Name="S_User" EntityType="SmartWorldModel.S_User" />
+        </EntityContainer>
+        <EntityType Name="D_House">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="HouseCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HouseTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Floor" Type="Int32" />
+          <Property Name="TotalFloor" Type="Int32" />
+          <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="YearPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ImgUrls" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Decorate" Type="Int32" />
+          <Property Name="HouseType" Type="Int32" />
+          <Property Name="Property" Type="Int32" />
+          <Property Name="IsDelete" Type="Boolean" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="D_HouseAndEquipment">
+          <Key>
+            <PropertyRef Name="HouseId" />
+            <PropertyRef Name="EquipmentId" />
+          </Key>
+          <Property Name="id" Type="Int32" />
+          <Property Name="HouseId" Type="Guid" Nullable="false" />
+          <Property Name="EquipmentId" Type="Guid" Nullable="false" />
+        </EntityType>
+        <EntityType Name="D_Info">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S_Equipment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="EquipmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="S_User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Guid" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SmartWorldModelStoreContainer" CdmEntityContainer="SmartWorldEntities">
+          <EntitySetMapping Name="D_House">
+            <EntityTypeMapping TypeName="SmartWorldModel.D_House">
+              <MappingFragment StoreEntitySet="D_House">
+                <ScalarProperty Name="CreateBy" ColumnName="CreateBy" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="IsDelete" ColumnName="IsDelete" />
+                <ScalarProperty Name="Property" ColumnName="Property" />
+                <ScalarProperty Name="HouseType" ColumnName="HouseType" />
+                <ScalarProperty Name="Decorate" ColumnName="Decorate" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="ImgUrls" ColumnName="ImgUrls" />
+                <ScalarProperty Name="YearPrice" ColumnName="YearPrice" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TotalFloor" ColumnName="TotalFloor" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="HouseTitle" ColumnName="HouseTitle" />
+                <ScalarProperty Name="HouseCode" ColumnName="HouseCode" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_HouseAndEquipment">
+            <EntityTypeMapping TypeName="SmartWorldModel.D_HouseAndEquipment">
+              <MappingFragment StoreEntitySet="D_HouseAndEquipment">
+                <ScalarProperty Name="EquipmentId" ColumnName="EquipmentId" />
+                <ScalarProperty Name="HouseId" ColumnName="HouseId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="D_Info">
+            <EntityTypeMapping TypeName="SmartWorldModel.D_Info">
+              <MappingFragment StoreEntitySet="D_Info">
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Contact" ColumnName="Contact" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_Equipment">
+            <EntityTypeMapping TypeName="SmartWorldModel.S_Equipment">
+              <MappingFragment StoreEntitySet="S_Equipment">
+                <ScalarProperty Name="EquipmentName" ColumnName="EquipmentName" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="S_User">
+            <EntityTypeMapping TypeName="SmartWorldModel.S_User">
+              <MappingFragment StoreEntitySet="S_User">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

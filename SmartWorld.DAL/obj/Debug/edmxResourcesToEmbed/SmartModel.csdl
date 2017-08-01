@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SmartWorldModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SmartWorldEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="D_House" EntityType="SmartWorldModel.D_House" />
+    <EntitySet Name="D_HouseAndEquipment" EntityType="SmartWorldModel.D_HouseAndEquipment" />
+    <EntitySet Name="D_Info" EntityType="SmartWorldModel.D_Info" />
+    <EntitySet Name="S_Equipment" EntityType="SmartWorldModel.S_Equipment" />
+    <EntitySet Name="S_User" EntityType="SmartWorldModel.S_User" />
+  </EntityContainer>
+  <EntityType Name="D_House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="HouseCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HouseTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="Int32" />
+    <Property Name="TotalFloor" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="YearPrice" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ImgUrls" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Decorate" Type="Int32" />
+    <Property Name="HouseType" Type="Int32" />
+    <Property Name="Property" Type="Int32" />
+    <Property Name="IsDelete" Type="Boolean" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="CreateBy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="D_HouseAndEquipment">
+    <Key>
+      <PropertyRef Name="HouseId" />
+      <PropertyRef Name="EquipmentId" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="HouseId" Type="Guid" Nullable="false" />
+    <Property Name="EquipmentId" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="D_Info">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="S_Equipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="EquipmentName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="S_User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

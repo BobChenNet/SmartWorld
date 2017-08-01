@@ -1,0 +1,13 @@
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\bin\Debug\SmartWorld.Uitls.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\bin\Debug\SmartWorld.Uitls.pdb
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\bin\Debug\Newtonsoft.Json.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\bin\Debug\Newtonsoft.Json.xml
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\obj\Debug\SmartWorld.Uitls.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.Uitls\obj\Debug\SmartWorld.Uitls.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\bin\Debug\SmartWorld.Uitls.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\bin\Debug\SmartWorld.Uitls.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\obj\Debug\SmartWorld.Uitls.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\obj\Debug\SmartWorld.Uitls.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.Uitls\obj\Debug\SmartWorld.Uitls.csprojResolveAssemblyReference.cache

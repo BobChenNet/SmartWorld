@@ -1,0 +1,29 @@
+c:\users\chenbo\documents\visual studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.DAL.dll
+c:\users\chenbo\documents\visual studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.DAL.pdb
+c:\users\chenbo\documents\visual studio 2017\Projects\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.dll
+c:\users\chenbo\documents\visual studio 2017\Projects\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.pdb
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.csprojResolveAssemblyReference.cache
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Model.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Uitls.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\Newtonsoft.Json.dll
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Model.pdb
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Uitls.pdb
+c:\Users\ChenBo\Documents\Visual Studio 2017\Projects\SmartWorld\SmartWorld.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.DAL.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.DAL.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Model.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Uitls.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Model.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.Uitls.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\obj\Debug\SmartWorld.DAL.pdb
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\SmartWorld.DAL.dll.config
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\Mentu\Desktop\SmartWorld\SmartWorld\SmartWorld.DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
